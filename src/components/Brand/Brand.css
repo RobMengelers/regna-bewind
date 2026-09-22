@@ -1,0 +1,36 @@
+.brand {
+  display: inline-flex;
+  gap: 15px;
+  align-items: center;
+  flex-shrink: 0;
+}
+.monogram {
+  font:
+    52px/0.9 "Libre Caslon Display",
+    Georgia,
+    serif;
+  color: var(--brass);
+  border-right: 1px solid var(--line);
+  padding-right: 17px;
+}
+.monogram span {
+  font-size: 34px;
+}
+.wordmark {
+  font-size: 22px;
+  letter-spacing: 0.19em;
+}
+.wordmark small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.5em;
+  margin-top: 5px;
+}
+@media (max-width: 700px) {
+  .wordmark {
+    font-size: 18px;
+  }
+  .monogram {
+    font-size: 43px;
+  }
+}

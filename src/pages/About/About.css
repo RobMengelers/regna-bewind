@@ -1,0 +1,45 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9%;
+  padding-block: 80px;
+}
+.editorial-image {
+  position: relative;
+  min-height: 430px;
+}
+.editorial-image img {
+  border: 1px solid var(--ink);
+  height: 100%;
+  max-height: 610px;
+  filter: saturate(0.85);
+  object-position: center top;
+}
+.prose p:not(.eyebrow) {
+  font-size: 14px;
+  color: var(--muted);
+}
+.statement {
+  border-left: 2px solid var(--brass);
+  padding: 12px 0 12px 24px;
+  margin-top: 30px;
+  font:
+    28px/1.3 "Libre Caslon Display",
+    serif;
+}
+.prose p:not(.eyebrow) {
+  font-size: 17px;
+}
+@media (max-width: 700px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-block: 50px;
+  }
+  .editorial-image {
+    min-height: 300px;
+  }
+  .editorial-image img {
+    height: 320px;
+  }
+}

@@ -1,0 +1,37 @@
+.page-heading {
+  background: var(--ink);
+  color: #f6f2eb;
+  padding-block: 68px 74px;
+}
+.page-heading .eyebrow {
+  color: #c7a374;
+}
+.page-heading h1 {
+  font-size: clamp(48px, 5vw, 72px);
+}
+.lead {
+  max-width: 540px;
+  font-size: 15px;
+  color: #c3c0b9;
+  margin: 26px 0 0;
+}
+.lead {
+  font-size: 17px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .page-heading .container > * {
+    animation: enter 0.8s both;
+  }
+  .page-heading h1 {
+    animation-delay: 0.1s;
+  }
+  .page-heading .lead {
+    animation-delay: 0.2s;
+  }
+}
+
+@media (max-width: 700px) {
+  .page-heading {
+    padding-block: 50px;
+  }
+}

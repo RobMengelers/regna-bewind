@@ -1,0 +1,52 @@
+footer {
+  background: #202120;
+  color: #eeebe4;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+  padding-block: 50px;
+}
+footer .monogram {
+  border-color: #56514a;
+}
+.footer-top p {
+  font:
+    24px/1.3 "Libre Caslon Display",
+    serif;
+  color: #bdb6aa;
+}
+.footer-top nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  font-size: 12px;
+}
+.footer-top a:hover {
+  color: #d0ac7a;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 20px;
+  border-top: 1px solid #413e37;
+  color: #b8b1a6;
+  font-size: 10px;
+}
+.footer-top nav {
+  font-size: 14px;
+}
+@media (max-width: 700px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-block: 40px;
+  }
+  .footer-top nav {
+    gap: 25px;
+    margin-top: 10px;
+  }
+}
