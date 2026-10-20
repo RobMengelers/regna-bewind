@@ -1,14 +1,30 @@
-import PageHeading from "../../components/PageHeading/PageHeading";
-import "./Services.css";
+import { Link } from "react-router";
+import PageHeading from "../components/PageHeading/PageHeading";
+import { pageMeta, canonicalLink } from "../seo";
+import "./diensten.css";
+
+export const meta = () =>
+  pageMeta({
+    title: "Onze diensten — Regna Bewind",
+    description:
+      "Beschermingsbewind, financieel overzicht, regelingen en schuldhulp: ontdek wat Regna Bewind voor u kan betekenen.",
+    path: "/diensten",
+  });
+
+export const links = () => canonicalLink("/diensten");
 
 const services = [
   [
     "Aanvraag bewind",
     "Begeleiding bij de aanvraag voor onderbewindstelling en een helder plan van aanpak op maat.",
+    "/diensten/beschermingsbewind",
+    "Meer over beschermingsbewind",
   ],
   [
     "Financieel overzicht",
     "We brengen uw financiële situatie zorgvuldig in kaart en zorgen voor structuur in uw administratie.",
+    "/diensten/budgetbeheer",
+    "Meer over budgetbeheer",
   ],
   [
     "Regelingen & toeslagen",
@@ -37,12 +53,17 @@ export default function Services() {
         en zorgen dat uw financiën goed geregeld zijn.
       </PageHeading>
       <section className="container service-list" aria-label="Dienstverlening">
-        {services.map(([title, text], index) => (
+        {services.map(([title, text, href, linkLabel], index) => (
           <article className="service-row" key={title}>
             <span className="service-number">0{index + 1}</span>
             <h2>{title}</h2>
             <div>
               <p>{text}</p>
+              {href && (
+                <Link className="text-link" to={href}>
+                  {linkLabel} <span aria-hidden="true">›</span>
+                </Link>
+              )}
               {index === 3 && (
                 <p>
                   Bij problematische schulden verwijzen wij door naar een

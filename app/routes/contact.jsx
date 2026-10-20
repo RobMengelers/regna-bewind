@@ -1,7 +1,18 @@
 import { useState } from "react";
-import PageHeading from "../../components/PageHeading/PageHeading";
-import { API_URL } from "../../api";
-import "./Contact.css";
+import PageHeading from "../components/PageHeading/PageHeading";
+import { API_URL } from "../api";
+import { pageMeta, canonicalLink } from "../seo";
+import "./contact.css";
+
+export const meta = () =>
+  pageMeta({
+    title: "Contact — Regna Bewind",
+    description:
+      "Neem contact op met Regna Bewind voor een kennismaking. Bel 06 39 71 23 04 of stuur een bericht via het contactformulier.",
+    path: "/contact",
+  });
+
+export const links = () => canonicalLink("/contact");
 
 const EMPTY_FORM = { name: "", email: "", message: "", company: "" };
 
@@ -59,51 +70,9 @@ export default function Contact() {
         de tijd voor uw verhaal.
       </PageHeading>
       <section className="container contact-layout">
-        <div className="contact-primary">
+        <div id="contact-formulier" className="contact-primary">
           <p className="eyebrow">Direct contact</p>
           <h2>We horen graag van u.</h2>
-          <div className="contact-detail">
-            <small>Bel ons</small>
-            06 39 71 23 04
-          </div>
-          <div className="contact-detail">
-            <small>Mail ons</small>
-            info@regnabewind.nl
-          </div>
-        </div>
-        <aside className="contact-aside">
-          <p className="eyebrow">Praktische informatie</p>
-          <h3>Telefonisch bereikbaar</h3>
-          <p>
-            Maandag t/m donderdag
-            <br />
-            09:30 – 12:00 uur
-            <br />
-            <span>Vrijdag gesloten</span>
-          </p>
-          <hr />
-          <h3>Postadres</h3>
-          <address>
-            Regna Bewind
-            <br />
-            Postbus 30040
-            <br />
-            6370 KA Landgraaf
-          </address>
-        </aside>
-      </section>
-      <section className="container contact-conversation">
-        <div>
-          <p className="eyebrow">Een persoonlijke kennismaking</p>
-          <h2>
-            Uw verhaal mag
-            <br />
-            er zijn.
-          </h2>
-          <p>
-            Een vraag stellen is een eerste stap. Vertel ons waar u tegenaan
-            loopt, dan bespreken we samen hoe Regna Bewind u kan ondersteunen.
-          </p>
           {status === "sent" ? (
             <p className="contact-success" role="status">
               Dank u wel. Uw bericht is verzonden — we nemen zo snel mogelijk
@@ -118,6 +87,7 @@ export default function Contact() {
                   name="name"
                   type="text"
                   autoComplete="name"
+                  placeholder="Uw naam"
                   required
                   maxLength={200}
                   value={form.name}
@@ -131,6 +101,7 @@ export default function Contact() {
                   name="email"
                   type="email"
                   autoComplete="email"
+                  placeholder="uw@email.nl"
                   required
                   value={form.email}
                   onChange={handleChange}
@@ -142,6 +113,7 @@ export default function Contact() {
                   id="contact-message"
                   name="message"
                   rows={6}
+                  placeholder="Vertel ons waar u tegenaan loopt…"
                   required
                   maxLength={5000}
                   value={form.message}
@@ -176,7 +148,51 @@ export default function Contact() {
             </form>
           )}
         </div>
-        <figure>
+        <aside className="contact-aside">
+          <p className="eyebrow">Praktische informatie</p>
+          <h3>Telefonisch bereikbaar</h3>
+          <p>
+            Maandag t/m donderdag
+            <br />
+            09:30 – 12:00 uur
+            <br />
+            <span>Vrijdag gesloten</span>
+          </p>
+          <hr />
+          <h3>Postadres</h3>
+          <address>
+            Regna Bewind
+            <br />
+            Postbus 30040
+            <br />
+            6370 KA Landgraaf
+          </address>
+        </aside>
+      </section>
+      <section className="container contact-conversation">
+        <div>
+          <p className="eyebrow">Een persoonlijke kennismaking</p>
+          <h2>
+            Uw verhaal mag
+            <br />
+            er zijn.
+          </h2>
+          <p>
+            Een vraag stellen is een eerste stap. Vertel ons waar u tegenaan
+            loopt, dan bespreken we samen hoe Regna Bewind u kan ondersteunen.
+          </p>
+          <div className="contact-channels">
+            <div>
+              <small>Bel ons</small>
+              <p>06 39 71 23 04</p>
+            </div>
+            <div>
+              <small>Mail ons</small>
+              <p>info@regnabewind.nl</p>
+            </div>
+          </div>
+        </div>
+        <div>
           <img
             src="/kennismaking.png"
             alt="Sfeerbeeld van een rustige gespreksruimte met twee stoelen aan een tafel"
@@ -185,8 +201,7 @@ export default function Contact() {
             loading="lazy"
             decoding="async"
           />
-          <figcaption>Sfeerimpressie</figcaption>
-        </figure>
+        </div>
       </section>
     </>
   );

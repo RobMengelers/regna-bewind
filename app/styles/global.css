@@ -98,15 +98,6 @@ h2 {
 p {
   line-height: 1.85;
 }
-.subtle-link {
-  font-size: 12px;
-  border-bottom: 1px solid #787265;
-  padding-bottom: 7px;
-}
-.subtle-link span {
-  margin-left: 12px;
-  color: var(--brass);
-}
 .text-link {
   display: inline-flex;
   gap: 30px;
@@ -127,7 +118,6 @@ p {
   top: 10px;
 }
 .button,
-.subtle-link,
 .text-link {
   font-size: 15px;
 }

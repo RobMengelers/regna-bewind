@@ -1,5 +1,16 @@
-import PageHeading from "../../components/PageHeading/PageHeading";
-import "./About.css";
+import PageHeading from "../components/PageHeading/PageHeading";
+import { pageMeta, canonicalLink } from "../seo";
+import "./over-ons.css";
+
+export const meta = () =>
+  pageMeta({
+    title: "Over ons — Regna Bewind",
+    description:
+      "Maak kennis met Petra Mengelers en de persoonlijke aanpak van Regna Bewind. Ruime ervaring in de financiële dienstverlening.",
+    path: "/over-ons",
+  });
+
+export const links = () => canonicalLink("/over-ons");
 
 export default function About() {
   return (

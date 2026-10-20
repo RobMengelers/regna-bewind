@@ -7,7 +7,7 @@ footer {
   justify-content: space-between;
   gap: 30px;
   align-items: center;
-  padding-block: 50px;
+  padding-block: 50px 22px;
 }
 footer .monogram {
   border-color: #56514a;
@@ -43,7 +43,7 @@ footer .monogram {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
-    padding-block: 40px;
+    padding-block: 40px 18px;
   }
   .footer-top nav {
     gap: 25px;

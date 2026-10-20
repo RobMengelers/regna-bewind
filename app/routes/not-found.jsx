@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
-import "./NotFound.css";
+import { Link } from "react-router";
+import "./not-found.css";
+
+export const meta = () => [{ title: "Pagina niet gevonden — Regna Bewind" }];
 
 export default function NotFound() {
   return (

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import Brand from "../Brand/Brand";
 import { pages } from "../../navigation";
 import "./Footer.css";
@@ -19,6 +19,7 @@ export default function Footer() {
               {label}
             </Link>
           ))}
+          <Link to="/veelgestelde-vragen">Veelgestelde vragen</Link>
         </nav>
       </div>
       <div className="container footer-bottom">

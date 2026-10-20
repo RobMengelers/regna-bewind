@@ -1,0 +1,152 @@
+.article-section {
+  padding-block: 55px;
+  border-top: 1px solid var(--line);
+}
+.article-section:first-of-type {
+  border-top: none;
+}
+.article-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.3fr;
+  gap: 8%;
+}
+.article-grid h2 {
+  font-size: clamp(30px, 3vw, 40px);
+  margin: 0;
+}
+.article-prose {
+  max-width: 640px;
+}
+.article-prose p {
+  color: var(--muted);
+  font-size: 17px;
+  margin: 0 0 18px;
+}
+.article-prose p:last-child {
+  margin-bottom: 0;
+}
+.article-prose strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.article-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.article-list li {
+  position: relative;
+  padding: 18px 0 18px 34px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.article-list li::before {
+  content: "›";
+  position: absolute;
+  left: 4px;
+  top: 18px;
+  color: var(--brass);
+  font-size: 20px;
+  line-height: 1.4;
+}
+.article-list li strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.article-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: article-step;
+}
+.article-steps li {
+  counter-increment: article-step;
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 24px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+}
+.article-steps li::before {
+  content: "0" counter(article-step);
+  color: #956b34;
+  font-size: 12px;
+  padding-top: 6px;
+}
+.article-steps h3 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+.article-steps p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+.article-note {
+  border-left: 2px solid var(--brass);
+  padding: 10px 0 10px 24px;
+  margin: 28px 0 0;
+  font: 22px/1.4 "Libre Caslon Display", serif;
+  color: var(--ink);
+}
+.article-cta {
+  padding-block: 60px 70px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+.article-cta h2 {
+  font-size: clamp(30px, 3vw, 42px);
+}
+.article-cta p {
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto 30px;
+  font-size: 17px;
+}
+.faq-list {
+  padding-block: 10px 60px;
+  max-width: 780px;
+}
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 28px 0;
+}
+.faq-item h2 {
+  font-size: 26px;
+  margin: 0 0 12px;
+}
+.faq-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+.faq-item a,
+.faq-footer-note a {
+  color: #906832;
+  border-bottom: 1px solid var(--brass);
+}
+.faq-footer-note {
+  padding-top: 36px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+@media (max-width: 700px) {
+  .article-section {
+    padding-block: 40px;
+  }
+  .article-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .article-steps li {
+    grid-template-columns: 36px 1fr;
+    gap: 14px;
+  }
+}

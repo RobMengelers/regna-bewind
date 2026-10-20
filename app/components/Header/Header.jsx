@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router";
 import Brand from "../Brand/Brand";
 import { pages } from "../../navigation";
 import "./Header.css";
@@ -39,7 +39,7 @@ export default function Header() {
           ))}
           <Link
             className="button small"
-            to="/contact"
+            to="/contact#contact-formulier"
             onClick={() => setOpen(false)}
           >
             Kennismaken <span aria-hidden="true">›</span>

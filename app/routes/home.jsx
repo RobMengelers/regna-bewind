@@ -1,5 +1,16 @@
-import { Link } from "react-router-dom";
-import "./Home.css";
+import { Link } from "react-router";
+import { pageMeta, canonicalLink } from "../seo";
+import "./home.css";
+
+export const meta = () =>
+  pageMeta({
+    title: "Regna Bewind — Beschermingsbewind en budgetbeheer in Landgraaf",
+    description:
+      "Regna Bewind helpt u met beschermingsbewind en budgetbeheer. Persoonlijke aandacht, overzicht en financiële rust in Limburg.",
+    path: "/",
+  });
+
+export const links = () => canonicalLink("/");
 
 export default function Home() {
   return (
@@ -17,7 +28,7 @@ export default function Home() {
             voor uw financiële situatie.
           </p>
           <div className="hero-actions">
-            <Link className="button" to="/contact">
+            <Link className="button" to="/contact#contact-formulier">
               Een kennismaking plannen <span aria-hidden="true">›</span>
             </Link>
           </div>
@@ -54,7 +65,7 @@ export default function Home() {
             we samen een plan dat bij u past.
           </p>
           <Link className="text-link" to="/over-ons">
-            Maak kennis met Regna <span aria-hidden="true">›</span>
+            Leer meer over ons<span aria-hidden="true">›</span>
           </Link>
         </div>
       </section>
