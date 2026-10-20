@@ -4,21 +4,16 @@
   gap: 12%;
   padding-block: 80px;
 }
-.contact-link {
-  display: block;
+.contact-detail {
   border-bottom: 1px solid var(--line);
   padding: 25px 0;
   font-size: clamp(18px, 2vw, 27px);
 }
-.contact-link small {
+.contact-detail small {
   display: block;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
   margin-bottom: 12px;
-}
-.contact-link > span {
-  float: right;
-  color: #956b34;
 }
 .contact-aside {
   padding: 36px;
@@ -45,9 +40,6 @@ address {
 address {
   font-size: 17px;
 }
-.contact-link small {
-  font-size: 12px;
-}
 @media (max-width: 700px) {
   .contact-layout {
     grid-template-columns: 1fr;
@@ -62,10 +54,10 @@ address {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 8%;
-  align-items: center;
+  align-items: start;
   padding-block: 30px 80px;
 }
-.contact-conversation p:not(.eyebrow) {
+.contact-conversation p:not(.eyebrow, .contact-success, .contact-error) {
   font-size: 17px;
   color: var(--muted);
   margin-bottom: 28px;
@@ -79,4 +71,69 @@ address {
 }
 @media (max-width: 700px) {
   .contact-conversation { grid-template-columns: 1fr; gap: 35px; padding-bottom: 50px; }
+}
+.contact-form {
+  display: grid;
+  gap: 22px;
+}
+.contact-field {
+  display: grid;
+  gap: 8px;
+}
+.contact-field label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.contact-field input,
+.contact-field textarea {
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  padding: 14px 16px;
+  width: 100%;
+}
+.contact-field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: var(--brass);
+  box-shadow: 0 0 0 3px rgba(188, 146, 90, 0.18);
+}
+.contact-form .button {
+  justify-self: start;
+  border: 0;
+  cursor: pointer;
+}
+.contact-form .button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.contact-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.contact-success {
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--ink);
+  border-left: 3px solid var(--brass);
+  background: #eeebe3;
+  padding: 18px 20px;
+}
+.contact-error {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #8a3a2a;
+  margin: 0;
 }
