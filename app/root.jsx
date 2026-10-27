@@ -17,7 +17,7 @@ export const meta = () => [
   {
     name: "description",
     content:
-      "Regna Bewind biedt beschermingsbewind en budgetbeheer in Landgraaf en omstreken. Persoonlijke aandacht en financiële rust.",
+      "Regna Bewind biedt beschermingsbewind in Landgraaf en omstreken. Persoonlijke aandacht en financiële rust.",
   },
   { property: "og:site_name", content: "Regna Bewind" },
   { property: "og:locale", content: "nl_NL" },
@@ -38,7 +38,7 @@ const organizationJsonLd = {
   logo: `${SITE_URL}/favicon.svg`,
   image: `${SITE_URL}/kennismaking.png`,
   description:
-    "Persoonlijke ondersteuning bij beschermingsbewind (wettelijk bewind) en budgetbeheer.",
+    "Persoonlijke ondersteuning bij beschermingsbewind (wettelijk bewind).",
   telephone: "+31639712304",
   email: "info@regnabewind.nl",
   address: {

@@ -27,17 +27,12 @@ const faqItems = [
   {
     question: "Wat kost een bewindvoerder?",
     answer:
-      "De beloning van een professionele bewindvoerder is vastgesteld door de overheid. In 2026 bedraagt de jaarbeloning €1.630 (€2.107 bij problematische schulden), plus eenmalig €767 aanvangswerkzaamheden — of €574 als eerder al budgetbeheer liep. De tarieven zijn sinds 2026 vrijgesteld van btw.",
+      "De beloning van een professionele bewindvoerder is vastgesteld door de overheid. In 2026 bedraagt de jaarbeloning €1.630 (€2.107 bij problematische schulden), plus eenmalig €767 aanvangswerkzaamheden. De tarieven zijn sinds 2026 vrijgesteld van btw.",
   },
   {
     question: "Vergoedt de gemeente de kosten van beschermingsbewind?",
     answer:
       "De kosten worden in de regel betaald door de betrokkene zelf. Als dat niet gaat, kunt u navragen of uw gemeente een regeling heeft, bijvoorbeeld via de Wmo of bijzondere bijstand. Veel gemeenten hebben een voorziening voor beschermingsbewind; informeer bij uw gemeente naar de mogelijkheden.",
-  },
-  {
-    question: "Wat is het verschil tussen beschermingsbewind en budgetbeheer?",
-    answer:
-      "Bij budgetbeheer is er geen rechterlijke uitspraak: het is een vrijwillige overeenkomst tussen u en een organisatie die uw financiën beheert. Bij beschermingsbewind stelt de kantonrechter de maatregel vast en wijst hij een bewindvoerder aan die wettelijk verantwoordelijk is. Budgetbeheer is daarmee laagdrempeliger; beschermingsbewind biedt meer zekerheid en formele bescherming.",
   },
   {
     question: "Wat doet een bewindvoerder precies?",
@@ -67,7 +62,7 @@ export const meta = () => [
   ...pageMeta({
     title: "Veelgestelde vragen — Regna Bewind",
     description:
-      "Antwoorden op veelgestelde vragen over beschermingsbewind, budgetbeheer, kosten en de aanvraag.",
+      "Antwoorden op veelgestelde vragen over beschermingsbewind, kosten en de aanvraag.",
     path: "/veelgestelde-vragen",
   }),
   ...jsonLd({
@@ -97,8 +92,8 @@ export default function VeelgesteldeVragen() {
           </>
         }
       >
-        De meest gestelde vragen over beschermingsbewind, budgetbeheer en de
-        kosten — helder op een rij.
+        De meest gestelde vragen over beschermingsbewind en de kosten — helder op
+        een rij.
       </PageHeading>
       <section className="container faq-list">
         {faqItems.map((item) => (
@@ -109,7 +104,7 @@ export default function VeelgesteldeVragen() {
         ))}
         <p className="faq-footer-note">
           Staat uw vraag er niet bij?{" "}
-          <Link to="/contact">Neem contact op</Link> — we denken graag met u
+          <Link to="/contact" prefetch="intent">Neem contact op</Link> — we denken graag met u
           mee.
         </p>
       </section>

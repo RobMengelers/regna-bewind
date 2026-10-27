@@ -4,9 +4,9 @@ import "./home.css";
 
 export const meta = () =>
   pageMeta({
-    title: "Regna Bewind — Beschermingsbewind en budgetbeheer in Landgraaf",
+    title: "Regna Bewind — Beschermingsbewind in Landgraaf",
     description:
-      "Regna Bewind helpt u met beschermingsbewind en budgetbeheer. Persoonlijke aandacht, overzicht en financiële rust in Limburg.",
+      "Regna Bewind helpt u met beschermingsbewind. Persoonlijke aandacht, overzicht en financiële rust in Limburg.",
     path: "/",
   });
 
@@ -28,8 +28,8 @@ export default function Home() {
             voor uw financiële situatie.
           </p>
           <div className="hero-actions">
-            <Link className="button" to="/contact#contact-formulier">
-              Een kennismaking plannen <span aria-hidden="true">›</span>
+            <Link className="button" to="/contact#contact-formulier" prefetch="intent">
+              Neem contact op <span aria-hidden="true">›</span>
             </Link>
           </div>
           <div className="hero-note">
@@ -64,8 +64,8 @@ export default function Home() {
             we doen. Met ruime ervaring in de financiële dienstverlening maken
             we samen een plan dat bij u past.
           </p>
-          <Link className="text-link" to="/over-ons">
-            Leer meer over ons<span aria-hidden="true">›</span>
+          <Link className="text-link" to="/over-ons" prefetch="intent">
+            Lees meer over ons <span aria-hidden="true">›</span>
           </Link>
         </div>
       </section>
@@ -82,7 +82,7 @@ export default function Home() {
               <li><h3>Overzicht krijgen</h3><p>We brengen uw financiële situatie in kaart. Zo wordt duidelijk wat er geregeld moet worden.</p></li>
               <li><h3>Een plan op maat</h3><p>Uw situatie vormt de basis voor een passende aanpak, met aandacht voor uw persoonlijke behoeften.</p></li>
             </ol>
-            <Link className="text-link" to="/diensten">Bekijk onze diensten <span aria-hidden="true">›</span></Link>
+            <Link className="text-link" to="/diensten" prefetch="intent">Bekijk onze diensten <span aria-hidden="true">›</span></Link>
           </div>
         </div>
       </section>

@@ -8,7 +8,6 @@ export default {
     "/diensten",
     "/contact",
     "/diensten/beschermingsbewind",
-    "/diensten/budgetbeheer",
     "/veelgestelde-vragen",
     "/404.html",
   ],

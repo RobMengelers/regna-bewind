@@ -33,13 +33,14 @@ export default function Header() {
           }}
         >
           {pages.map(([path, label]) => (
-            <NavLink key={path} to={path} end onClick={() => setOpen(false)}>
+            <NavLink key={path} to={path} end prefetch="intent" onClick={() => setOpen(false)}>
               {label}
             </NavLink>
           ))}
           <Link
             className="button small"
             to="/contact#contact-formulier"
+            prefetch="intent"
             onClick={() => setOpen(false)}
           >
             Kennismaken <span aria-hidden="true">›</span>

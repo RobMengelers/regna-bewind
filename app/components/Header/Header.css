@@ -108,4 +108,7 @@
   .navigation nav > a:not(.button) {
     padding: 16px 0;
   }
+  .navigation nav > a:not(.button)::after {
+    width: 50%;
+  }
 }

@@ -175,7 +175,7 @@ export default function Beschermingsbewind() {
               <strong>€2.107</strong> bij problematische schulden), plus een
               eenmalig bedrag voor de aanvangswerkzaamheden van{" "}
               <strong>€767</strong> — of <strong>€574</strong> als eerder al
-              budgetbeheer liep. De tarieven zijn sinds 2026 vrijgesteld van
+              eerder beschermingsbewind liep. De tarieven zijn sinds 2026 vrijgesteld van
               btw.
             </p>
             <p>
@@ -194,7 +194,7 @@ export default function Beschermingsbewind() {
           Heeft u behoefte aan rust en overzicht in uw financiën? We
           bespreken graag wat beschermingsbewind voor u kan betekenen.
         </p>
-        <Link className="button" to="/contact#contact-formulier">
+        <Link className="button" to="/contact#contact-formulier" prefetch="intent">
           Neem contact op <span aria-hidden="true">›</span>
         </Link>
       </section>

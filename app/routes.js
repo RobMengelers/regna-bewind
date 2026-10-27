@@ -6,7 +6,6 @@ export default [
   route("diensten", "routes/diensten.jsx"),
   route("contact", "routes/contact.jsx"),
   route("diensten/beschermingsbewind", "routes/beschermingsbewind.jsx"),
-  route("diensten/budgetbeheer", "routes/budgetbeheer.jsx"),
   route("veelgestelde-vragen", "routes/veelgestelde-vragen.jsx"),
   route("*", "routes/not-found.jsx"),
 ];

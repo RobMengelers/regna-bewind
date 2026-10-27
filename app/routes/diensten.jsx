@@ -23,8 +23,6 @@ const services = [
   [
     "Financieel overzicht",
     "We brengen uw financiële situatie zorgvuldig in kaart en zorgen voor structuur in uw administratie.",
-    "/diensten/budgetbeheer",
-    "Meer over budgetbeheer",
   ],
   [
     "Regelingen & toeslagen",

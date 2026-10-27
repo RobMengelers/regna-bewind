@@ -3,7 +3,7 @@ import "./Brand.css";
 
 export default function Brand() {
   return (
-    <Link className="brand" to="/" aria-label="Regna Bewind — home">
+    <Link className="brand" to="/" prefetch="intent" aria-label="Regna Bewind — home">
       <span className="monogram">
         R<span>.</span>
       </span>

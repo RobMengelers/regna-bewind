@@ -15,11 +15,11 @@ export default function Footer() {
         </p>
         <nav aria-label="Footernavigatie">
           {pages.map(([path, label]) => (
-            <Link to={path} key={path}>
+            <Link to={path} key={path} prefetch="intent">
               {label}
             </Link>
           ))}
-          <Link to="/veelgestelde-vragen">Veelgestelde vragen</Link>
+          <Link to="/veelgestelde-vragen" prefetch="intent">Veelgestelde vragen</Link>
         </nav>
       </div>
       <div className="container footer-bottom">
