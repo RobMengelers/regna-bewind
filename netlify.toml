@@ -4,3 +4,15 @@
 
 [build.environment]
   NODE_VERSION = "24"
+
+[[redirects]]
+  from = "https://regnabewind.nl/*"
+  to = "https://www.regnabewind.nl/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://regnabewind.nl/*"
+  to = "https://www.regnabewind.nl/:splat"
+  status = 301
+  force = true

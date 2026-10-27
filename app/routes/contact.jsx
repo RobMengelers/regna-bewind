@@ -167,6 +167,9 @@ export default function Contact() {
             <br />
             6370 KA Landgraaf
           </address>
+          <p style={{ marginTop: "24px", fontSize: "12px", opacity: 0.6 }}>
+            <a href="/klachten" style={{ color: "inherit", textDecoration: "underline" }}>Heeft u een klacht, laat het ons weten</a>
+          </p>
         </aside>
       </section>
       <section className="container contact-conversation">
